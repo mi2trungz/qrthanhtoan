@@ -59,7 +59,7 @@ body::before {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 28px;
+  padding: 18px;
 }
 
 .payment-card {
@@ -68,7 +68,7 @@ body::before {
   border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius-xl);
-  padding: 28px 22px;
+  padding: 20px 17px;
 }
 
 .eyebrow,
@@ -87,16 +87,16 @@ body::before {
 }
 
 .qr-panel {
-  margin-top: 22px;
+  margin-top: 16px;
   display: grid;
-  gap: 18px;
+  gap: 13px;
 }
 
 .qr-frame {
   position: relative;
   border-radius: var(--radius-lg);
   background: var(--surface-strong);
-  padding: 18px;
+  padding: 15px;
   border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-md);
 }
@@ -139,74 +139,97 @@ body::before {
 
 .details-panel {
   display: grid;
-  gap: 16px;
+  gap: 13px;
   align-content: start;
 }
 
 .info-card,
 .notice-card {
   border-radius: var(--radius-md);
-  padding: 12px 18px;
+  padding: 12px 15px;
 }
 
 .info-card {
-  background: var(--surface-soft);
-  border: 1px solid rgba(19, 62, 114, 0.12);
+  background: linear-gradient(180deg, #fbfdff, #f4f8ff);
+  border: 1px solid rgba(19, 62, 114, 0.1);
+  box-shadow: 0 10px 22px rgba(18, 36, 61, 0.05);
 }
 
 .info-label {
   display: block;
-  margin-bottom: 4px;
-  font-size: 0.8rem;
-  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+  color: #173d6d;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
 .transfer-note {
   display: block;
-  font-size: 1.08rem;
-  line-height: 1.38;
+  max-width: 16ch;
+  font-size: 1.22rem;
+  line-height: 1.3;
   word-break: break-word;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--primary-strong);
 }
 
 .notice-card {
-  background: var(--danger-soft);
-  border: 1px solid var(--danger-border);
-  box-shadow: 0 10px 24px rgba(139, 30, 30, 0.06);
+  background: linear-gradient(180deg, #fff9f8, #fff4f3);
+  border: 1px solid rgba(184, 48, 48, 0.14);
+  border-left: 4px solid rgba(184, 48, 48, 0.42);
+  box-shadow: 0 8px 18px rgba(139, 30, 30, 0.05);
 }
 
 .notice-label {
   display: block;
-  margin-bottom: 4px;
-  color: var(--danger-text);
-  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: #7e1717;
+  font-size: 0.92rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
 .notice-text {
   margin: 0;
   color: #661717;
-  font-size: 0.98rem;
-  line-height: 1.42;
-  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 550;
+}
+
+@media (max-width: 639px) {
+  .info-label,
+  .notice-label {
+    font-size: 0.88rem;
+  }
+
+  .notice-card {
+    padding-inline: 14px;
+  }
+
+  .notice-text {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
 }
 
 .actions {
   display: grid;
   gap: 12px;
+  margin-top: 1px;
 }
 
 .button {
   appearance: none;
   border-radius: 14px;
   min-height: 52px;
-  padding: 14px 18px;
+  padding: 12px 18px;
   font: inherit;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -234,9 +257,9 @@ body::before {
 
 .button-primary {
   border: 1px solid transparent;
-  background: linear-gradient(180deg, #1d4f8b, #123b69);
+  background: linear-gradient(180deg, #255a97, #153f70);
   color: #ffffff;
-  box-shadow: 0 14px 24px rgba(19, 62, 114, 0.22);
+  box-shadow: 0 16px 28px rgba(19, 62, 114, 0.2);
 }
 
 .button-secondary {
@@ -418,7 +441,7 @@ body.modal-open {
   }
 
   .qr-panel {
-    grid-template-columns: minmax(390px, 1.18fr) minmax(300px, 0.82fr);
+    grid-template-columns: minmax(350px, 1.02fr) minmax(320px, 0.98fr);
     align-items: start;
     gap: 28px;
   }
@@ -430,18 +453,19 @@ body.modal-open {
 
   .info-card,
   .notice-card {
-    padding: 15px 22px;
+    padding: 16px 22px;
   }
 
   .transfer-note {
-    font-size: 1.18rem;
+    font-size: 1.28rem;
   }
 
   .actions {
     grid-template-columns: 1fr;
+    margin-top: 8px;
   }
 
   .button {
-    min-height: 56px;
+    min-height: 58px;
   }
 }
