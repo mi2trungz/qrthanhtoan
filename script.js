@@ -1,8 +1,8 @@
 const config = {
   qrImageUrl:
-    "https://cdn.phototourl.com/free/2026-08-22-0bf06ac1-605f-4d88-a636-fae0d16d5dfd.png",
+    "https://cdn.phototourl.com/free/2026-08-26-e153de5f-77d1-40b9-9751-0f3be82a9f67.png",
   transferNote: "Tên facebook của bạn (Không dấu)",
-  brandTitle: "Thanh toán QR",
+  brandTitle: "QR THANH TOÁN",
   downloadFileName: "ma-qr-thanh-toan.jpg"
 };
 
